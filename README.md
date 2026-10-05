@@ -2,7 +2,7 @@
 
 Wyatt's personal weekly planner: a color-coded week view with one-tap completion tracking, consistency scores, yearly reminders and a weekly debrief agent. The full spec is in [BRIEF.md](BRIEF.md); rules for Claude Code are in [CLAUDE.md](CLAUDE.md).
 
-Live at **calendar.wyattroscoe.info** (deployed by Vercel on every merge to `main`).
+Live at **calendar.wyattroscoe.com** (deployed by Vercel on every merge to `main`).
 
 ## Run it on your computer
 
@@ -51,4 +51,4 @@ tests/                 Vitest tests
 2. Storage → add a **Neon** Postgres database (sets `DATABASE_URL`).
 3. Settings → Environment Variables: `APP_PASSWORD`, `SESSION_SECRET`, `APP_TIMEZONE`.
 4. Redeploy. Production builds run `scripts/deploy-db.ts`, which applies migrations and seeds the template automatically.
-5. Settings → Domains → add `calendar.wyattroscoe.info`, then add the CNAME record Vercel shows in GoDaddy DNS.
+5. Settings → Domains → add `calendar.wyattroscoe.com`, then add the CNAME record Vercel shows in GoDaddy DNS.

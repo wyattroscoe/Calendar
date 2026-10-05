@@ -7,7 +7,7 @@ Personal weekly planner for Wyatt. Full spec lives in `BRIEF.md` — read it bef
 - Build one phase at a time (see "Build phases" in `BRIEF.md`). Propose a plan and wait for approval before writing code for a new phase.
 - Never commit directly to `main`. Work on a feature branch (e.g. `phase-1-foundation`) and open a pull request.
 - Wyatt is new to dev tooling: explain steps in plain language and say what he needs to do in a browser (GitHub, Vercel, GoDaddy) versus what Claude does.
-- Production domain: `calendar.wyattroscoe.info` (Vercel; DNS at GoDaddy).
+- Production domain: `calendar.wyattroscoe.com` (Vercel; DNS at GoDaddy).
 
 ## Architecture rules
 

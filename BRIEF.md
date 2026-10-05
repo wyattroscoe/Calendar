@@ -4,7 +4,7 @@ Oct 1, 2026 · @Wyatt Roscoe
 
 ## How to use this brief with Claude Code and GitHub
 
-Put this brief in a GitHub repo, let Claude Code build it in phases, and let Vercel deploy every update to calendar.wyattroscoe.info automatically.
+Put this brief in a GitHub repo, let Claude Code build it in phases, and let Vercel deploy every update to calendar.wyattroscoe.com automatically.
 
 1. **Create the repo.** On github.com, make a new private repository (e.g. `weekly-calendar`). To work with others later, add them under Settings → Collaborators.
 2. **Install Claude Code.** Use the Claude desktop app's Code tab or the terminal version, and sign in.
@@ -12,7 +12,7 @@ Put this brief in a GitHub repo, let Claude Code build it in phases, and let Ver
 4. **Add this brief.** Save this file in the root of the repo as `BRIEF.md`. Ask Claude Code to create a `CLAUDE.md` file summarizing the key rules; Claude Code reads that file automatically every session.
 5. **Build one phase at a time.** Start with the prompt below, review what it builds, then move to the next phase (see Build phases at the end).
 6. **Use branches and pull requests.** Ask Claude Code to work on a branch per feature and open a pull request. Collaborators can review and comment before changes merge into `main`.
-7. **Deploy.** Connect the repo to Vercel (free tier is fine). Every merge to `main` redeploys. In Vercel, add the domain `calendar.wyattroscoe.info`, then add the CNAME record it gives you in GoDaddy's DNS settings.
+7. **Deploy.** Connect the repo to Vercel (free tier is fine). Every merge to `main` redeploys. In Vercel, add the domain `calendar.wyattroscoe.com`, then add the CNAME record it gives you in GoDaddy's DNS settings.
 8. **Keep secrets out of GitHub.** API keys (Claude, Google, Microsoft, Notion) and your password go in Vercel environment variables and a local `.env` file that is git-ignored. The repo only contains a `.env.example` with blank names.
 
 **Starter prompt to paste into Claude Code:**
@@ -238,7 +238,7 @@ All tokens live in environment variables. Connections are managed in Settings, a
 
 Build in five phases, each ending in a pull request and a working deploy.
 
-1. **Foundation:** repo, password login, database, seeded weekly template, Weekly Calendar page with colors, editing rules, overlap highlighting, and completion controls. Deploy to calendar.wyattroscoe.info.
+1. **Foundation:** repo, password login, database, seeded weekly template, Weekly Calendar page with colors, editing rules, overlap highlighting, and completion controls. Deploy to calendar.wyattroscoe.com.
 2. **Dashboard:** planned vs actual bars, consistency scores, morning nudge for unmarked blocks.
 3. **Year at a Glance:** reminders page and monthly/weekly surfacing logic.
 4. **Agent:** quick-add bar, agent memory, weekly debrief, recipes and the Sunday ingredients block.
