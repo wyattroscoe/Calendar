@@ -5,12 +5,14 @@ import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { db } from "@/db";
 import { projects, weekBlocks, type WeekBlock } from "@/db/schema";
-import { endSession, passwordMatches, requireUser, startSession } from "@/lib/auth";
+import { endSession, missingConfig, passwordMatches, requireUser, startSession } from "@/lib/auth";
 import { DAY_END, DAY_START, isISODate, SLOT } from "@/lib/time";
 
 // Every action checks the session itself: server actions are reachable by direct POST.
 
 export async function login(_prev: string | null, formData: FormData): Promise<string | null> {
+  const missing = missingConfig();
+  if (missing.length > 0) return `The server is missing: ${missing.join(", ")}. Add it in Vercel → Settings → Environment Variables, then redeploy.`;
   const password = String(formData.get("password") ?? "");
   if (!passwordMatches(password)) {
     await new Promise((r) => setTimeout(r, 750)); // slow down guessing
