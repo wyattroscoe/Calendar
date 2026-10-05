@@ -14,6 +14,7 @@ export const PGLITE_DIR = "./.pglite";
 function createDb(): DB {
   const url = process.env.DATABASE_URL;
   if (url) return drizzleNeon(neon(url), { schema }) as unknown as DB;
+  if (process.env.VERCEL) throw new Error("DATABASE_URL is not set. Add the Neon database in Vercel → Storage, then redeploy.");
   return drizzlePglite(PGLITE_DIR, { schema }) as unknown as DB;
 }
 

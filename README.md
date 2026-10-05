@@ -50,5 +50,5 @@ tests/                 Vitest tests
 1. Import the GitHub repo in Vercel.
 2. Storage → add a **Neon** Postgres database (sets `DATABASE_URL`).
 3. Settings → Environment Variables: `APP_PASSWORD`, `SESSION_SECRET`, `APP_TIMEZONE`.
-4. Run migrations and seed against the hosted database once: put its `DATABASE_URL` in your local `.env` and run `npm run setup`.
+4. Redeploy. Production builds run `scripts/deploy-db.ts`, which applies migrations and seeds the template automatically.
 5. Settings → Domains → add `calendar.wyattroscoe.info`, then add the CNAME record Vercel shows in GoDaddy DNS.
