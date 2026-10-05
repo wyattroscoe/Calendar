@@ -4,6 +4,14 @@ import { redirect } from "next/navigation";
 import { OWNER_ID } from "./owner";
 import { SESSION_COOKIE, SESSION_DAYS, signSession, verifySession } from "./session";
 
+/** Names of required settings that are missing, so the login page can say what to fix. */
+export function missingConfig(): string[] {
+  const missing: string[] = [];
+  if (!process.env.APP_PASSWORD) missing.push("APP_PASSWORD");
+  if ((process.env.SESSION_SECRET ?? "").length < 32) missing.push("SESSION_SECRET (32+ characters)");
+  return missing;
+}
+
 export function passwordMatches(input: string): boolean {
   const expected = process.env.APP_PASSWORD;
   if (!expected) throw new Error("APP_PASSWORD must be set.");
