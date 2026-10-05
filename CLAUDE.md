@@ -45,3 +45,5 @@ Personal weekly planner for Wyatt. Full spec lives in `BRIEF.md` — read it bef
 ## Open-question defaults (until Wyatt decides)
 
 Quick-add: preview + confirm · Debrief: Sunday 4:00pm · Overlaps: double-booked only · Notion: read-only · Rotation order: set in debrief.
+
+@AGENTS.md
